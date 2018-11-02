@@ -20,13 +20,11 @@
     <div class="row">
       <div class="col-2"></div>
       <div class="col-5 d-flex justify-content-center align-items-center">
-        <button type="button" class="btn btn-primary buttonpad">Punch Attack</button>
-        <button type="button" class="btn btn-primary buttonpad">Energy Attack</button>
-        <button type="button" class="btn btn-primary buttonpad">Ultimate</button>
+        <button type="button" class="btn btn-primary buttonpad" onclick="slap(1, 0, 0)">Punch Attack</button>
+        <button type="button" class="btn btn-primary buttonpad" onclick="slap(0, 2, 0)">Energy Attack</button>
+        <button type="button" class="btn btn-primary buttonpad" onclick="slap(0, 0, 3)">Ultimate</button>
       </div>
       <div class="col-5"></div>
-
-      <!-- CHARACTERS -->
       <!-- TRANSFORMATIONS -->
       <div class="col-2 d-flex align-items-center">
         <div class="row">
@@ -64,13 +62,13 @@
       <!-- PLAYER HEALTH BAR -->
       <div class="col-3"></div>
       <div class="col-3">
-        <div class="progress" id="progress1">
+        <div class="progress" id="healthbar1">
         </div>
       </div>
       <div class="col-2"></div>
       <!-- TARGET HEALTH BAR -->
       <div class="col-3">
-        <div class="progress" id="progress2">
+        <div class="progress" id="healthbar2">
         </div>
       </div>
       <div class="col-1"></div>
