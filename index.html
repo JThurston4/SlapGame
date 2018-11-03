@@ -14,7 +14,8 @@
   <div class="container-fluid bg">
     <!-- RESET  -->
     <div class="row" style="height: 20vh; padding-top: 15px;">
-      <div class="col d-flex justify-content-flex-start align-items-start" id="reset"><button type="button" class="btn btn-danger">Reset</button></div>
+      <div class="col d-flex justify-content-flex-start align-items-start" id="reset"><button type="button" class="btn btn-danger"
+          onclick="location.reload()">Reset</button></div>
     </div>
     <!-- ATTACKS -->
     <div class="row">
@@ -29,36 +30,25 @@
       <div class="col-2 d-flex align-items-center">
         <div class="row">
           <div class="col-12 d-flex justify-content-center buttonpad2">
-            <button type="button" class="btn btn-secondary">Super Saiyan</button>
+            <button type="button" class="btn btn-secondary" onclick="updatePower(1,0,0)">Super Saiyan</button>
           </div>
           <div class="col-12 d-flex justify-content-center buttonpad2">
-            <button type="button" class="btn btn-secondary">Super Saiyan 3 </button>
+            <button type="button" class="btn btn-secondary" onclick="updatePower(0,1,0)">Super Saiyan 3 </button>
           </div>
           <div class="col-12 d-flex justify-content-center">
-            <button type="button" class="btn btn-secondary">Super Saiyan God</button>
+            <button type="button" class="btn btn-secondary" onclick="updatePower(0,0,1)">Super Saiyan God</button>
           </div>
         </div>
       </div>
       <!-- GOKU -->
-      <div class="col-5 d-flex justify-content-center">
-        <img src="https://orig00.deviantart.net/5e79/f/2011/355/4/1/goku_stand_by_arestwinblade-d4jrt05.gif" style="height: 50vh">
+      <div class="col-5 d-flex justify-content-center align-items-center">
+        <div id="goku"></div>
       </div>
       <!-- SAITAMA -->
       <div class="col-5 d-flex justify-content-center target">
         <!-- <img src="https://i.pinimg.com/originals/37/bd/91/37bd91c3f1a9a29725507938ac3b3b94.gif"> -->
         <img src="http://images.uncyc.org/pt/d/d2/Saitama_gif.jpg" style="height: 45vh">
       </div>
-      <!-- PLAYER HEALTH BAR -->
-      <!-- <div class="col-2"></div>
-      <div class="col-5">
-        <div class="progress" id="progress1">
-        </div>
-      </div>
-      TARGET HEALTH BAR
-      <div class="col-5">
-        <div class="progress" id="progress2">
-        </div>
-      </div> -->
       <!-- PLAYER HEALTH BAR -->
       <div class="col-3"></div>
       <div class="col-3">
