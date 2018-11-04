@@ -76,7 +76,6 @@ function slap(punch, energy, ult) {
     target.health = 500
     target.powerLevel = 1
     player.playerHealth = 0
-    player.powerLevel = 4
   }
   update()
 
@@ -84,6 +83,9 @@ function slap(punch, energy, ult) {
 
 function update() {
   //update all data to the screen
+  if (player.playerHealth == 0) {
+    player.powerLevel = 4
+  }
   document.getElementById("healthbar2").innerHTML = `<div id="targethealth" class="progress-bar bg-danger progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75"
   aria-valuemin="0" aria-valuemax="100" style="width: ${target.health / 100}%;"></div>`
   document.getElementById("healthbar1").innerHTML = `<div class="progress-bar  bg-dark progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: ${player.playerHealth}%"></div>`;
