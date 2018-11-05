@@ -7,14 +7,13 @@ let target = {
 
 let player = {
   playerHealth: 100,
-  // powerLevel: ['normal', 'super', 'super3', 'god'],
   powerLevel: 0,
   animations: 0,
   images: [
     ["https://orig00.deviantart.net/5e79/f/2011/355/4/1/goku_stand_by_arestwinblade-d4jrt05.gif", "https://i.gifer.com/ZLBh.gif", "https://media.giphy.com/media/rArPDIllQwWly/giphy.gif", "https://i.skyrock.net/2646/12022646/pics/295155426.gif"],
     ["https://media.giphy.com/media/xG6UZwGnPaNYQ/giphy.gif", "https://www.picgifs.com/anime/dragon-ball-z/goku/anime-goku-511391.gif", "https://i.imgur.com/FOlSN2o.gif", "https://i.imgur.com/7RQSm9H.gif"],
     ["https://orig00.deviantart.net/c19c/f/2015/256/a/3/goku_ssj3___stance_by_hadesdiossupremo-d99gtpz.gif", "https://media.giphy.com/media/HUr19G7eOkyB2/200.gif", "http://www.gifs-animados.es/anime/dragon-ball-z/goku/gifs-animados-goku-611041.gif", "http://www.mytinyphone.com/uploads/users/nightwolve777/320342.gif"],
-    ["https://vignette.wikia.nocookie.net/dbz-dokkanbattle/images/d/df/Goku.gif/revision/latest?cb=20170504180205", "https://media.giphy.com/media/3ohc0YpD0LR5wRyz1S/giphy.gif", "http://network.mugenguild.com/balthazar/images_gohan_ado/swirling-kamehamehas.gif", "https://i.gifer.com/4xjg.gif"], ["https://i.imgur.com/lNrJUlO.gif", "https://i.imgur.com/lNrJUlO.gif", "https://i.imgur.com/lNrJUlO.gif", "https://i.imgur.com/lNrJUlO.gif"]]
+    ["https://vignette.wikia.nocookie.net/dbz-dokkanbattle/images/d/df/Goku.gif/revision/latest?cb=20170504180205", "https://media.giphy.com/media/3ohc0YpD0LR5wRyz1S/giphy.gif", "http://network.mugenguild.com/balthazar/images_gohan_ado/swirling-kamehamehas.gif", "https://i.gifer.com/4xjg.gif"], ["https://i.imgur.com/lNrJUlO.gif"]]
 }
 
 
@@ -36,7 +35,6 @@ function updatePower(super1, super3, god) {
 
 function slap(punch, energy, ult) {
   //check if super sayan is activated
-  // if (!sayan) {
   // debugger
   if (punch) {
     player.animations = 1
@@ -78,13 +76,13 @@ function slap(punch, energy, ult) {
     player.playerHealth = 0
   }
   update()
-
 }
 
 function update() {
   //update all data to the screen
   if (player.playerHealth == 0) {
     player.powerLevel = 4
+    player.animations = 0
   }
   document.getElementById("healthbar2").innerHTML = `<div id="targethealth" class="progress-bar bg-danger progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75"
   aria-valuemin="0" aria-valuemax="100" style="width: ${target.health / 100}%;"></div>`
